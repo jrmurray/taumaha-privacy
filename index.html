@@ -27,13 +27,18 @@ a { color:var(--link); }
 <ul>
 <li><strong>On your iPhone.</strong> Your workouts, routines, history and settings are stored on your device.</li>
 <li><strong>In your own iCloud.</strong> If you are signed in to iCloud, Taumaha backs up and syncs your data through your private iCloud account (CloudKit) so it can be restored on a new phone and shared between your own devices. Only you can read it. If you use Apple&#x27;s Advanced Data Protection, it is end-to-end encrypted. Delete all data in Profile removes it from the phone and from your iCloud.</li>
-<li><strong>Apple Health (optional).</strong> If you allow it, Taumaha saves your finished workouts, their effort rating, an estimate of the energy you used, and your recovery sessions to Apple Health. It reads one thing only, your most recent body weight, on your phone, to work out that estimate. That weight is never sent to us or anyone else. You can turn this off in Profile or in the Health settings.</li>
-<li><strong>Keychain.</strong> If a later version lets you add your own Anthropic (Claude) key, it is kept in the iOS Keychain on your phone only and is not synced.</li>
+<li><strong>Apple Health (optional).</strong> If you allow it, Taumaha saves your finished workouts, their effort rating, an estimate of the energy you used, and your recovery sessions to Apple Health. It reads two things only, on your phone: the active energy your Watch or another app already recorded during the workout, which it uses in place of an estimate, and your most recent body weight, to work out an estimate when there is no recorded energy. Neither is ever sent to us or anyone else. You can turn this off in Profile or in the Health settings.</li>
+<li><strong>Keychain.</strong> If you add your own Anthropic (Claude) key, it is kept in the iOS Keychain on that phone only. It is never synced, and it is sent nowhere except to Anthropic with your requests.</li>
 </ul>
 <h2>Health check</h2>
 <p>When you set up Taumaha it asks a few health questions, such as whether you have a heart condition or pain in a knee. Taumaha keeps only which items you ticked, the body areas and the dates, on your phone and in your own iCloud account. We cannot see them. They are never sent to Anthropic or anyone else, and Taumaha uses them only to be more careful: pausing progression, leaving out exercises, asking before adding weight, or shortening sauna and cold plunge times. You can review or change them in Profile &gt; Health check, and Delete all data removes them. Taumaha is for people aged 16 and over.</p>
 <h2>Anthropic (Claude) features</h2>
-<p>A later version may offer optional Claude features that use your own Anthropic account and key. If you use them, the workout information you choose to ask about is sent directly from your phone to Anthropic under your own agreement with Anthropic. We are not involved and do not receive it.</p>
+<p>Claude features are optional and stay off until you add your own Anthropic key in Profile &gt; Claude. They run on your own Anthropic account, under your own agreement with Anthropic. We are not involved and receive nothing. When you use them, information goes straight from your phone to Anthropic (api.anthropic.com) and nowhere else:</p>
+<ul>
+<li><strong>Next session review:</strong> when you finish a workout that came from a routine, that workout&#x27;s exercises, sets and set notes, the routine&#x27;s targets, and your last three sessions of those exercises.</li>
+<li><strong>Live coach</strong> (off unless you turn it on): during a workout, the set you just did, your sets so far, your last three sessions of that exercise, your records and set notes, and any question you ask it.</li>
+</ul>
+<p>Warm-up sets are left out, and your health check answers, body weight and anything read from Apple Health are never sent. The coach&#x27;s comments stay on your phone for 90 days and are not synced. Your Claude usage count and spending cap are kept on your phone only.</p>
 <h2>Other things to know</h2>
 <ul>
 <li>Taumaha uses your phone&#x27;s notifications to tell you when rest ends and when a recovery station&#x27;s time is up.</li>
